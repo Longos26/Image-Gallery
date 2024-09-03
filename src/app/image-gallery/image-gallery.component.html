@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="controls">
+    <input type="text" [(ngModel)]="searchQuery" (input)="onSearch()" placeholder="Search images...">
+    <div class="resize-button-container">
+      <button (click)="toggleScaleSlider()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+          <path d="M200 32L56 32C42.7 32 32 42.7 32 56l0 144c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l40-40 79 79-79 79L73 295c-6.9-6.9-17.2-8.9-26.2-5.2S32 302.3 32 312l0 144c0 13.3 10.7 24 24 24l144 0c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2l-40-40 79-79 79 79-40 40c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8l144 0c13.3 0 24-10.7 24-24l0-144c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2l-40 40-79-79 79-79 40 40c6.9 6.9 17.2 8.9 26.2 5.2s14.8-12.5 14.8-22.2l0-144c0-13.3-10.7-24-24-24L312 32c-9.7 0-18.5 5.8-22.2 14.8s-1.7 19.3 5.2 26.2l40 40-79 79-79 79 40-40c6.9-6.9 8.9-17.2 5.2-26.2S209.7 32 200 32z"/>
+        </svg>
+      </button>
+      <div class="dropdown" *ngIf="showScaleSlider" (click)="closeScaleSlider($event)">
+        <input type="range" min="100" max="400" [(ngModel)]="imageWidth" (input)="onScaleChange($event)">
+      </div>
+    </div>
+  </div>
+
+  <div class="context">
+    <ul class="inline-list">
+      <li [class.active]="activeCategory === 'all'" (click)="filterCategory('all')">All</li>
+      <!-- More categories -->
+    </ul>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal" (click)="closeModal($event)">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <div class="jumbotron" style="background-image:url('https://images.unsplash.com/photo-1522204657746-fccce0824cfd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=84b5e9bea51f72c63862a0544f76e0a3&auto=format&fit=crop&w=1500&q=80');">
+  </div>
+
+  <div class="image-gallery" [style.gridTemplateColumns]="'repeat(auto-fill, minmax(' + imageWidth + 'px, 1fr))'">
+    <div class="image-item" *ngFor="let image of filteredImages" (click)="openModal(image.url)">
+      <img [src]="image.url" [alt]="image.alt" class="gallery-image">
+      <div class="button-container">
+        <button class="download-button" (click)="onDownload(image.id); $event.stopPropagation()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+            <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

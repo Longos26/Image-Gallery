@@ -1,0 +1,28 @@
+<header class="header">
+  <nav>
+    <a class="logo" (click)="navigateBasedOnLogin()">C The Moment</a>
+    <ul>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/register">Signup</a>
+      </li>
+      <li *ngIf="isLoggedIn" class="profile-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="profile-icon" routerLink="/profile">
+         <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
+        </svg>
+        <span routerLink="/profile">{{ username }}</span>
+      </li>
+      <li *ngIf="isLoggedIn" class="profile-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="profile-icon" routerLink="/uploading">
+          <path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128l-368 0zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39L296 392c0 13.3 10.7 24 24 24s24-10.7 24-24l0-134.1 39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"/>
+        </svg>
+        <span>Upload</span>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <button (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </nav>
+</header>

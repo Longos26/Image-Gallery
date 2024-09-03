@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* General Reset and Body Styling */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #e60023;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+li a:hover {
+  color: #e60023;
+}
+
+.profile-container {
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.profile-container span {
+  cursor: pointer;
+}
+
+/* Ensure the wrapper takes full height and centers its content */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f3f3f3; /* Matching the light grey background */
+}
+
+/* Centering the register wrapper */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the register container */
+.register-container {
+    background-color: #ffffff;
+    color: #333333; /* Darker text for contrast */
+    padding: 40px;
+    border-radius: 8px; /* Slightly smaller border radius for a modern look */
+    text-align: center;
+    width: 100%;
+    max-width: 360px; /* Matching the width of the original */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the container */
+.register-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling the login link */
+.login-link {
+    margin-top: 16px; /* Adjusted for consistency */
+    font-size: 14px;
+    color: #e60023; /* Pinterest red */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.login-link:hover {
+    color: #c72c2c; /* Darker red on hover */
+}
+
+/* Styling the heading */
+h2 {
+    margin: 0 0 24px; /* Adjusted margins */
+    font-size: 24px; /* Slightly larger heading */
+    font-weight: 700;
+    color: #333333; /* Darker color for the heading */
+}
+
+/* Styling input groups */
+.input-group {
+    position: relative;
+    margin-bottom: 20px; /* Adjusted margin for consistency */
+}
+
+/* Styling input fields */
+.input-group input {
+    width: 100%;
+    padding: 12px 16px; /* Adjusted padding for consistency */
+    border: 1px solid #d1d1d1; /* Light grey border */
+    border-radius: 4px; /* Smaller border radius for a modern feel */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    background-color: #ffffff; /* White background for inputs */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+}
+
+/* Focus state for inputs */
+.input-group input:focus {
+    border-color: #e60023; /* Pinterest red on focus */
+    box-shadow: 0 0 8px rgba(230, 0, 35, 0.3); /* Light shadow on focus */
+}
+
+/* Positioning icons */
+.input-group .icon {
+    position: absolute;
+    left: 12px; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999; /* Grey color for icons */
+}
+
+/* Icon sizes */
+.user-icon svg, .lock-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Styling buttons */
+button {
+    background-color: #e60023; /* Pinterest red */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem; /* Adjusted padding */
+    border-radius: 4px; /* Smaller border radius */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem; /* Matching font size from second CSS */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for colors and transform */
+    width: 100%;
+    margin-top: 16px; /* Adjusted for consistency */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #bf0020; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}

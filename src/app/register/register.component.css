@@ -1,0 +1,136 @@
+/* Background image for the wrapper */
+.background-im {
+    position: absolute; /* Ensure the background image covers the whole area */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/564x/ee/2d/23/ee2d230645538e73f62f77b6828a39d0.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    z-index: -1; /* Place behind other content */
+}
+
+/* Ensure the wrapper takes full height and centers its content */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f3f3f3; /* Matching the light grey background */
+}
+
+/* Centering the register wrapper */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Required for absolute positioning of the background image */
+}
+
+/* Styling the register container */
+.register-container {
+    background-color: #ffffff;
+    color: #333333; /* Darker text for contrast */
+    padding: 40px;
+    border-radius: 8px; /* Slightly smaller border radius for a modern look */
+    text-align: center;
+    width: 100%;
+    max-width: 360px; /* Matching the width of the original */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    position: relative; /* Ensure it sits above the background */
+}
+
+/* Hover effect for the container */
+.register-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling the login link */
+.login-link {
+    margin-top: 16px; /* Adjusted for consistency */
+    font-size: 14px;
+    color: #e60023; /* Pinterest red */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.login-link:hover {
+    color: #c72c2c; /* Darker red on hover */
+}
+
+/* Styling the heading */
+h2 {
+    margin: 0 0 24px; /* Adjusted margins */
+    font-size: 24px; /* Slightly larger heading */
+    font-weight: 700;
+    color: #333333; /* Darker color for the heading */
+}
+
+/* Styling input groups */
+.input-group {
+    position: relative;
+    margin-bottom: 20px; /* Adjusted margin for consistency */
+}
+
+/* Styling input fields */
+.input-group input {
+    width: 100%;
+    padding: 12px 40px 12px 40px; /* Adjusted padding to accommodate icons */
+    border: 1px solid #d1d1d1; /* Light grey border */
+    border-radius: 4px; /* Smaller border radius for a modern feel */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    background-color: #ffffff; /* White background for inputs */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+}
+
+/* Focus state for inputs */
+.input-group input:focus {
+    border-color: #e60023; /* Pinterest red on focus */
+    box-shadow: 0 0 8px rgba(230, 0, 35, 0.3); /* Light shadow on focus */
+}
+
+/* Positioning icons */
+.input-group .icon {
+    position: absolute;
+    left: 12px; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999; /* Grey color for icons */
+    width: 20px; /* Fixed width for consistency */
+    height: 20px; /* Fixed height for consistency */
+}
+
+/* Icon sizes */
+.user-icon svg, .lock-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling buttons */
+button {
+    background-color: #e60023; /* Pinterest red */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Adjusted padding for better balance */
+    border-radius: 4px; /* Smaller border radius */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for colors and transform */
+    width: 100%;
+    margin-top: 16px; /* Adjusted for consistency */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #c72c2c; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}

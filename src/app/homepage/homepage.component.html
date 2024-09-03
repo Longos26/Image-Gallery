@@ -1,0 +1,32 @@
+
+<!-- slider -->
+<div class="slider">
+    <!-- list Items -->
+    <div class="list">
+        <div class="item" *ngFor="let image of filteredImages; let i = index" [class.active]="i === itemActive" (click)="openModal(image.url)">
+            <img [src]="image.url" [alt]="image.alt">
+            <div class="content">
+                <p>Photos</p>
+                <h2>{{ image.alt }}</h2>
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- button arrows -->
+    <div class="arrows">
+        <button id="prev" (click)="prevSlide()"><</button>
+        <button id="next" (click)="nextSlide()">></button>
+    </div>
+    <!-- thumbnail -->
+    <div class="thumbnail">
+        <div class="item" *ngFor="let image of filteredImages; let i = index" [class.active]="i === itemActive">
+            <img [src]="image.url" [alt]="image.alt">
+            <div class="content">
+                {{ image.alt }}
+            </div>
+        </div>
+    </div>
+    
+</div>

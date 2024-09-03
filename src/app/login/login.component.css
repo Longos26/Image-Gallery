@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Ensure the wrapper takes full height and centers its content */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #f3f3f3; /* Light grey background similar to Pinterest */
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background: url('https://i.pinimg.com/originals/23/01/83/23018309f6bf463608fa0e8630e3befd.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire wrapper */
+}
+
+.login-container {
+    background-color: #ffffff; /* White background for a clean look */
+    color: #333333; /* Darker text for better contrast */
+    padding: 40px;
+    border-radius: 8px; /* Slightly smaller radius for a more modern look */
+    text-align: center;
+    width: 100%;
+    max-width: 360px; /* Slightly smaller max width for a more compact form */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.login-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+h2 {
+    margin: 0 0 24px; /* Adjusted margins */
+    font-size: 24px; /* Slightly smaller heading for a more minimalist look */
+    font-weight: 700;
+    color: #333333; /* Darker color for the heading */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px; /* Reduced margin for tighter spacing */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px 12px 40px; /* Adjusted padding for a more streamlined look and to account for icon space */
+    border: 1px solid #d1d1d1; /* Light grey border */
+    border-radius: 4px; /* Smaller border radius for a more modern feel */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+}
+
+.input-group input:focus {
+    border-color: #e60023; /* Pinterest red on focus */
+    box-shadow: 0 0 8px rgba(230, 0, 35, 0.3); /* Light shadow on focus */
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 12px; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999; /* Grey color for icons */
+}
+
+.user-icon svg, .lock-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.register-link {
+    margin-top: 16px; /* Reduced margin for tighter spacing */
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #e60023; /* Pinterest red */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.register-link a:hover {
+    color: #c72c2c; /* Darker red on hover */
+}
+
+button {
+    background-color: #e60023; /* Pinterest red */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Adjusted padding for better balance */
+    border-radius: 4px; /* Smaller border radius */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for colors and transform */
+}
+
+button:hover {
+    background-color: #c72c2c; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
